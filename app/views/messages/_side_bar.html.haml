@@ -3,14 +3,14 @@
     .side-header__user-name
       = current_user.name
     .side-header__user-name__top-items 
-      = link_to "#", class: "icon1" do
+      = link_to new_group_path, class: "icon1" do
         =icon('far', 'edit')
       = link_to edit_user_path(current_user) do
         =icon('fas', 'cog', class: "icon1")
   .groups
-    .groups__menu
-      .groups__menu-name techcamp
-      .groups__menu-new-messages まだメッセージがありません
-    .groups__menu
-      .groups__menu-name techcamp
-      .groups__menu-new-messages まだメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .groups__menu
+          .groups__menu-name 
+            = group.name
+          .groups__menu-new-messages まだメッセージがありません
