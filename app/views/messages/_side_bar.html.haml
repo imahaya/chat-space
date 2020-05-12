@@ -9,8 +9,9 @@
         =icon('fas', 'cog', class: "icon1")
   .groups
     - current_user.groups.each do |group|
-      = link_to '#' do
+      = link_to group_messages_path(group) do
         .groups__menu
           .groups__menu-name 
             = group.name
-          .groups__menu-new-messages まだメッセージがありません
+          .groups__menu-new-messages
+            = group.show_last_message
