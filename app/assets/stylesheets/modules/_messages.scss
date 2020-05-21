@@ -115,9 +115,14 @@ a {
     background-color: #fafafa;
     overflow: scroll;
     padding-bottom:20px;
+    padding-top: 35px;
+
+    .chat-main__message {
+      padding-bottom: 46px;
+    }
 
     &__group {
-      padding: 35px 0 12px 40px;
+      padding: 0 0 12px 40px;
       display: flex;
       justify-content: flex-start;
 
