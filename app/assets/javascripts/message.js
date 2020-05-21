@@ -3,34 +3,41 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class="chat-main__message" data-message-id="${message.id}">
-         <div class="chat-main__message-list__group">
-           <div class="chat-main__message-list__group-member">
-             ${message.user_name}
-           </div>
-           <div class="chat-main__message-list__group-time">
-             ${message.created_at}
-           </div>
-         </div>
-         <div class="chat-main__message-list__group-time">  
-             ${message.content}
-         </div>
-         <img src=${message.image} >
-       </div>`
+        <div class="message">
+          <div class="chat-main__message-list__group">
+            <div class="chat-main__message-list__group-member">
+              ${message.user_name}
+            </div>
+            <div class="chat-main__message-list__group-time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="chat-main__message-list__group-time">
+            ${message.content}
+          </div>
+          <div class="chat-main__message-list__group-time__image">
+            <img class="lower-message__image" src="${message.image}">
+          </div>
+        </div>
+      </div>`
      return html;
    } else {
      var html =
-      `<div class="chat-main__message" data-message-id="${message.id}">
-         <div class="chat-main__message-list__group">
-           <div class="chat-main__message-list__group-member">
-             ${message.user_name}
-           </div>
-           <div class="chat-main__message-list__group-time">
-             ${message.created_at}
-           </div>
-         </div>
-         <div class="chat-main__message-list__group-time">  
-             ${message.content}
-         </div>`
+     `<div class="chat-main__message" data-message-id="${message.id}">
+        <div class="message">
+          <div class="chat-main__message-list__group">
+            <div class="chat-main__message-list__group-member">
+              ${message.user_name}
+            </div>
+            <div class="chat-main__message-list__group-time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="chat-main__message-list__group-time">
+            ${message.content}
+          </div>
+        </div>
+      </div>`
      return html;
    };
  }
