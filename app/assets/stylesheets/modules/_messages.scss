@@ -4,6 +4,7 @@
 
 a {
   text-decoration: none;
+  color:#38aef0;
 }
 
 .chat-side {
@@ -45,14 +46,14 @@ a {
     overflow: scroll;
 
       &__menu {
-        height: 91px;
         width: 260px;
 
         &-name {
           font-size: 15px;
           font-weight: bold;
           color: white;
-          padding: 20px 0 5px 0;
+          margin: 0 0 5px 0;
+          font-weight: lighter;
         }
     
         &-new-messages {
@@ -60,6 +61,7 @@ a {
           font-weight: bold;
           color: white;
           padding: 0 0 40px 0;
+          font-weight: lighter;
         }
       }
   }
@@ -78,6 +80,7 @@ a {
     height: 100px;
     background-color: #ffffff;
     display: flex;
+    border-bottom: solid 1px #eeeeee;
 
     &__list {
 
@@ -103,6 +106,7 @@ a {
       border: solid 1px #38aef0;
       position: absolute;
       right: 40px;
+      color:#38aef0;
     }
   }
   
@@ -110,6 +114,7 @@ a {
     height: calc(100% - 190px);
     background-color: #fafafa;
     overflow: scroll;
+    padding-bottom:20px;
 
     &__group {
       padding: 35px 0 12px 40px;
@@ -123,9 +128,13 @@ a {
       }
       
       &-time {
-        color: #999999;
+        color: #434a54;
         font-size: 12px;
-        padding-left: 10px;
+        padding-left: 40px;
+
+        &__image{
+          padding-left:40px;
+        }
       }
     }
 
